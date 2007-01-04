@@ -11,9 +11,12 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ##############################################################################
+
 import os, re, unittest
 import pkg_resources
+
 from zope.testing import doctest, renormalizing
+
 
 def test_suite():
     global __test__
@@ -27,4 +30,3 @@ def test_suite():
                (re.compile('\S+sample-(\w+)'), r'/sample-\1'),
                ]),
              )
-
