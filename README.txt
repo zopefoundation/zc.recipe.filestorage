@@ -37,6 +37,7 @@ object::
     </zodb>
 
     >>> recipe.install()
+    ()
 
     >>> import tempfile
     >>> d = tempfile.mkdtemp()
@@ -61,6 +62,7 @@ object::
     </zodb>
 
     >>> recipe.install()
+    ()
 
     >>> import os
     >>> os.listdir(d)

@@ -39,6 +39,10 @@ class Recipe:
             part = os.path.dirname(self.options['path'])
             if not os.path.exists(part):
                 os.mkdir(part)
+        return ()
+
+    def update(self):
+        pass
 
 template = """\
 <zodb>

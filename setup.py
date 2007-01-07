@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 name = "zc.recipe.filestorage"
 setup(
     name = name,
-    version = "1.0a1",
+    version = "1.0a5",
     author = "Jim Fulton",
     author_email = "jim@zope.com",
     description = "ZC Buildout recipe for defining a file-storage",
