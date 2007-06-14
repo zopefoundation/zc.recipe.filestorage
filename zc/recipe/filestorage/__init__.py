@@ -19,6 +19,7 @@ class Recipe:
 
     def __init__(self, buildout, name, options):
         self.name, self.options = name, options
+
         path = options.get('path')
         if path is None:
             path = os.path.join(buildout['buildout']['parts-directory'],
@@ -30,9 +31,19 @@ class Recipe:
                 logging.getLogger('zc.recipe.filestorage').error(
                     "%s does not exixt", path)
             self.make_part = False
-
         options['path'] = path
-        options['zconfig'] = template % path
+
+        blob_dir = options.get('blob-dir')
+        if blob_dir is None:
+            template = plain_template
+        else:
+            template = blob_template
+            blob_dir = os.path.join(buildout['buildout']['directory'],
+                                    blob_dir)
+        options['blob-dir'] = blob_dir
+
+        options['zconfig'] = template % {'path': path,
+                                         'blob-dir': blob_dir}
 
     def install(self):
         if self.make_part:
@@ -44,10 +55,21 @@ class Recipe:
     def update(self):
         pass
 
-template = """\
+plain_template = """\
 <zodb>
   <filestorage>
-    path %s
+    path %(path)s
   </filestorage>
+</zodb>
+"""
+
+blob_template = """\
+<zodb>
+  <blobstorage>
+    blob-dir = %(blob-dir)s
+    <filestorage>
+      path %(path)s
+    </filestorage>
+  </blobstorage>
 </zodb>
 """
