@@ -66,7 +66,7 @@ plain_template = """\
 blob_template = """\
 <zodb>
   <blobstorage>
-    blob-dir = %(blob-dir)s
+    blob-dir %(blob-dir)s
     <filestorage>
       path %(path)s
     </filestorage>
