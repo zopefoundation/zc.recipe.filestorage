@@ -33,17 +33,20 @@ class Recipe:
             self.make_part = False
         options['path'] = path
 
-        blob_dir = options.get('blob-dir')
-        if blob_dir is None:
+        blob_dir = options.get('blob-dir', '')
+        if not blob_dir:
             template = plain_template
         else:
             template = blob_template
             blob_dir = os.path.join(buildout['buildout']['directory'],
                                     blob_dir)
         options['blob-dir'] = blob_dir
+        shared = options.get('shared-blob-dir', 'no')
 
-        options['zconfig'] = template % {'path': path,
-                                         'blob-dir': blob_dir}
+        options['zconfig'] = template % dict(
+            path=path,
+            blob_dir=blob_dir,
+            shared=shared)
 
     def install(self):
         if self.make_part:
@@ -66,7 +69,8 @@ plain_template = """\
 blob_template = """\
 <zodb>
   <blobstorage>
-    blob-dir %(blob-dir)s
+    blob-dir %(blob_dir)s
+    shared-blob-dir %(shared)s
     <filestorage>
       path %(path)s
     </filestorage>
