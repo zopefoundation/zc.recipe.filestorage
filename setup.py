@@ -20,4 +20,5 @@ setup(
     dependency_links = ['http://download.zope.org/distribution/'],
     entry_points = {'zc.buildout':
                     ['default = %s:Recipe' % name]},
+    zip_safe = True,
     )
