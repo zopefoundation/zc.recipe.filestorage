@@ -1,6 +1,6 @@
 ##############################################################################
 #
-# Copyright (c) 2006 Zope Corporation and Contributors.
+# Copyright (c) 2006, 2007 Zope Corporation and Contributors.
 # All Rights Reserved.
 #
 # This software is subject to the provisions of the Zope Public License,
@@ -56,7 +56,7 @@ class Recipe:
         return ()
 
     def update(self):
-        pass
+        self.install()
 
 plain_template = """\
 <zodb>

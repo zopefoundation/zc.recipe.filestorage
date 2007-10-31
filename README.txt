@@ -68,11 +68,23 @@ object::
     >>> os.listdir(d)
     ['db']
 
-The update method doesn't do anything, as the database part's directory
+The update method doesn't do much, as the database part's directory
 already exists, but it is present, so buildout doesn't complain and doesn't
 accidentally run install() again::
 
     >>> recipe.update()
+
+If the storage's directory is removed, is it re-added by the update method::
+
+    >>> os.rmdir(os.path.join(d, 'db'))
+    >>> os.listdir(d)
+    []
+    >>> recipe.update()
+    >>> os.listdir(d)
+    ['db']
+
+This is useful in development when the directory containing the database is
+removed in order to start the database from scratch.
 
 
 To do
