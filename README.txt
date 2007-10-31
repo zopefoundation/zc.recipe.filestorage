@@ -87,6 +87,15 @@ This is useful in development when the directory containing the database is
 removed in order to start the database from scratch.
 
 
+Release history
+---------------
+
+1.0.0 (unreleased)
+~~~~~~~~~~~~~~~~~~
+
+Initial release.
+
+
 To do
 -----
 
