@@ -1,9 +1,10 @@
+===================================
 Recipe for setting up a filestorage
 ===================================
 
 This recipe can be used to define a file-storage.  It creates a ZConfig
 file-storage database specification that can be used by other recipes to
-generate ZConfig configuration files. 
+generate ZConfig configuration files.
 
 This recipe takes an optional path option.  If none is given, it creates and
 uses a subdirectory of the buildout parts directory with the same name as the
@@ -12,7 +13,7 @@ part.
 The recipe records a zconfig option for use by other recipes.
 
 We'll show a couple of examples, using a dictionary as a simulated buildout
-object::
+object:
 
     >>> import zc.recipe.filestorage
     >>> buildout = dict(
@@ -70,7 +71,7 @@ object::
 
 The update method doesn't do much, as the database part's directory
 already exists, but it is present, so buildout doesn't complain and doesn't
-accidentally run install() again::
+accidentally run install() again:
 
     >>> recipe.update()
 
@@ -85,15 +86,6 @@ If the storage's directory is removed, is it re-added by the update method::
 
 This is useful in development when the directory containing the database is
 removed in order to start the database from scratch.
-
-
-Release history
----------------
-
-1.0.0 (unreleased)
-~~~~~~~~~~~~~~~~~~
-
-Initial release.
 
 
 To do
