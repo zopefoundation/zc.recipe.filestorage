@@ -75,7 +75,7 @@ accidentally run install() again:
 
     >>> recipe.update()
 
-If the storage's directory is removed, is it re-added by the update method::
+If the storage's directory is removed, is it re-added by the update method:
 
     >>> os.rmdir(os.path.join(d, 'db'))
     >>> os.listdir(d)
