@@ -41,12 +41,10 @@ class Recipe:
             blob_dir = os.path.join(buildout['buildout']['directory'],
                                     blob_dir)
         options['blob-dir'] = blob_dir
-        shared = options.get('shared-blob-dir', 'no')
 
         options['zconfig'] = template % dict(
             path=path,
-            blob_dir=blob_dir,
-            shared=shared)
+            blob_dir=blob_dir)
 
     def install(self):
         if self.make_part:
@@ -70,7 +68,6 @@ blob_template = """\
 <zodb>
   <blobstorage>
     blob-dir %(blob_dir)s
-    shared-blob-dir %(shared)s
     <filestorage>
       path %(path)s
     </filestorage>

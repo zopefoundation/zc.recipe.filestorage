@@ -2,6 +2,12 @@
 CHANGES
 =======
 
+1.1.0 (2008-??-??)
+------------------
+
+- Removed 'shared-blob-dir' from blobstorage section.
+
+
 1.0.0 (2007-11-03)
 ------------------
 
