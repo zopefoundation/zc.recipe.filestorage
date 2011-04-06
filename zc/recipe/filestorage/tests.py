@@ -14,8 +14,8 @@
 
 import os, re, unittest
 import pkg_resources
-
-from zope.testing import doctest, renormalizing
+import doctest
+from zope.testing import renormalizing
 
 
 def test_suite():
