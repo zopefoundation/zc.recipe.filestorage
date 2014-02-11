@@ -21,7 +21,7 @@ from zope.testing import renormalizing
 def test_suite():
     global __test__
     req = pkg_resources.Requirement.parse('zc.recipe.filestorage')
-    __test__ = dict(README=pkg_resources.resource_string(req, 'README.txt'))
+    __test__ = dict(README=pkg_resources.resource_string(req, 'README.rst'))
     return doctest.DocTestSuite(
              checker=renormalizing.RENormalizing([
                (re.compile('\S+%(sep)s\w+%(sep)s\w+.fs'

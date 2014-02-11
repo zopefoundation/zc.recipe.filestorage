@@ -8,9 +8,9 @@ setup(
     author_email="jim@zope.com",
     description="ZC Buildout recipe for defining a file-storage",
     long_description=(
-        open("README.txt").read()
+        open("README.rst").read()
         + '\n\n' +
-        open("CHANGES.txt").read()),
+        open("CHANGES.rst").read()),
     license="ZPL 2.1",
     keywords=["zodb", "zc.buildout"],
     url="http://pypi.python.org/pypi/%s/" % name,
