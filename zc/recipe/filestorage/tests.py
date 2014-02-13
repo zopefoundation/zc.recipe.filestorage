@@ -21,9 +21,9 @@ def test_suite():
     return doctest.DocFileSuite(
         "README.rst",
         checker=renormalizing.RENormalizing([
-            (re.compile('\S+%(sep)s\w+%(sep)s\w+.fs'
-                        % dict(sep=os.path.sep)),
+            (re.compile(r'\S+%(sep)s\w+%(sep)s\w+.fs'
+                        % dict(sep=re.escape(os.path.sep))),
              r'/tmp/data/Data.fs'),
-            (re.compile('\S+sample-(\w+)'), r'/sample-\1'),
+            (re.compile(r'\S+sample-(\w+)'), r'/sample-\1'),
             ]),
         )
