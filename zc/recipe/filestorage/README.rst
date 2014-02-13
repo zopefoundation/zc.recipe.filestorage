@@ -86,12 +86,3 @@ If the storage's directory is removed, is it re-added by the update method:
 
 This is useful in development when the directory containing the database is
 removed in order to start the database from scratch.
-
-
-To do
------
-
-- Add support for various file-storage options
-
-- Create a ZODB-configuration recipe that is meant to be a base class for
-  storage recipes and provides database-configuration options.

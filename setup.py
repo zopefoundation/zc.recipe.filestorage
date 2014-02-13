@@ -8,7 +8,7 @@ setup(
     author_email="jim@zope.com",
     description="ZC Buildout recipe for defining a file-storage",
     long_description=(
-        open("README.rst").read()
+        open(os.path.join("zc", "recipe", "filestorage", "README.rst")).read()
         + '\n\n' +
         open("CHANGES.rst").read()),
     license="ZPL 2.1",
