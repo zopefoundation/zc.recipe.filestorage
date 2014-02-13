@@ -3,7 +3,7 @@ CHANGES
 =======
 
 
-1.2.0 (unreleased)
+1.2.0 (2014-02-13)
 ------------------
 
 - Python 3 compatibility
