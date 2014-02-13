@@ -27,10 +27,11 @@ object:
     >>> recipe = zc.recipe.filestorage.Recipe(
     ...                   buildout, 'db', buildout['db'])
 
-    >>> print buildout['db']['path']
+    >>> print(buildout['db']['path'])
     /buildout/foo/Main.fs
 
-    >>> print buildout['db']['zconfig'],
+    >>> from six import print_
+    >>> print_(buildout['db']['zconfig'], end='')
     <zodb>
       <filestorage>
         path /buildout/foo/Main.fs
@@ -52,10 +53,10 @@ object:
     >>> recipe = zc.recipe.filestorage.Recipe(
     ...                   buildout, 'db', buildout['db'])
 
-    >>> print buildout['db']['path']
+    >>> print(buildout['db']['path'])
     /tmp/tmpQo0DTB/db/Data.fs
 
-    >>> print buildout['db']['zconfig'],
+    >>> print_(buildout['db']['zconfig'], end='')
     <zodb>
       <filestorage>
         path /tmp/tmpQo0DTB/db/Data.fs

@@ -2,8 +2,11 @@
 CHANGES
 =======
 
-1.1.1 (unreleased)
+
+1.2.0 (unreleased)
 ------------------
+
+- Python 3 compatibility
 
 - Using Python's ``doctest`` module instead of deprecated
   ``zope.testing.doctest``.
