@@ -17,16 +17,13 @@ import pkg_resources
 import doctest
 from zope.testing import renormalizing
 
-
 def test_suite():
-    global __test__
-    req = pkg_resources.Requirement.parse('zc.recipe.filestorage')
-    __test__ = dict(README=pkg_resources.resource_string(req, 'README.txt'))
-    return doctest.DocTestSuite(
-             checker=renormalizing.RENormalizing([
-               (re.compile('\S+%(sep)s\w+%(sep)s\w+.fs'
-                           % dict(sep=os.path.sep)),
-                r'/tmp/data/Data.fs'),
-               (re.compile('\S+sample-(\w+)'), r'/sample-\1'),
-               ]),
-             )
+    return doctest.DocFileSuite(
+        "README.rst",
+        checker=renormalizing.RENormalizing([
+            (re.compile(r'\S+%(sep)s\w+%(sep)s\w+.fs'
+                        % dict(sep=re.escape(os.path.sep))),
+             r'/tmp/data/Data.fs'),
+            (re.compile(r'\S+sample-(\w+)'), r'/sample-\1'),
+            ]),
+        )
