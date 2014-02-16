@@ -2,6 +2,11 @@
 CHANGES
 =======
 
+1.1.1 (2014-02-16)
+------------------
+
+- Fixed: packaging bug that caused a test failure in
+         a test runner that didn't use buildout to run setup.py.
 
 1.1.0 (2014-02-14)
 ------------------
