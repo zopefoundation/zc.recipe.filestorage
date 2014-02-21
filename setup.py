@@ -34,7 +34,6 @@ setup(
         "Programming Language :: Python :: 3.3",
         ],
     packages=find_packages(),
-    data_files=[(".", ["README.txt"])],
     namespace_packages=["zc", "zc.recipe"],
     install_requires=["zc.buildout", "zope.testing", "setuptools", "six"],
     entry_points={"zc.buildout": ["default=%s:Recipe" % name]},
