@@ -2,11 +2,17 @@
 CHANGES
 =======
 
+1.1.2 (2014-02-21)
+------------------
+
+- Fixed: packaging bug that caused 'pip install zc.recipe.filestorage' to fail
+  with an error about missing README.txt
+
 1.1.1 (2014-02-16)
 ------------------
 
 - Fixed: packaging bug that caused a test failure in
-         a test runner that didn't use buildout to run setup.py.
+  a test runner that didn't use buildout to run setup.py.
 
 1.1.0 (2014-02-14)
 ------------------
