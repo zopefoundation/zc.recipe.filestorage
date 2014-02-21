@@ -1,3 +1,6 @@
 recursive-include zc *.rst
 include *.txt
 include *.rst
+include .travis.yml
+include buildout.cfg
+include tox.ini
