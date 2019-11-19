@@ -5,9 +5,9 @@ CHANGES
 2.0 (unreleased)
 ------------------
 
-- Drop support for Python 2.6, 3.2, 3.3
+- Drop support for Python 2.6, 3.2, 3.3.
 
-- Add support for Python 3.5, 3.6, 3.7, 3.8.
+- Add support for Python 3.5, 3.6, 3.7, 3.8, PyPy, PyPy3.
 
 
 1.1.2 (2014-02-21)
