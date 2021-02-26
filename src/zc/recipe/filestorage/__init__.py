@@ -12,7 +12,8 @@
 #
 ##############################################################################
 
-import logging, os
+import logging
+import os
 
 
 class Recipe:
@@ -55,6 +56,7 @@ class Recipe:
 
     def update(self):
         self.install()
+
 
 plain_template = """\
 <zodb>

@@ -9,7 +9,8 @@ setup(
     author_email="jim@zope.com",
     description="ZC Buildout recipe for defining a file-storage",
     long_description=(
-        open(os.path.join("zc", "recipe", "filestorage", "README.rst")).read()
+        open(os.path.join(
+            "src", "zc", "recipe", "filestorage", "README.rst")).read()
         + '\n\n' +
         open("CHANGES.rst").read()),
     license="ZPL 2.1",
@@ -33,13 +34,15 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
-        ],
-    packages=find_packages(),
+    ],
+    packages=find_packages('src'),
+    package_dir={'': 'src'},
     namespace_packages=["zc", "zc.recipe"],
     install_requires=["zc.buildout", "zope.testing", "setuptools", "six"],
     entry_points={"zc.buildout": ["default=%s:Recipe" % name]},
     include_package_data=True,
     zip_safe=True,
-    )
+)
