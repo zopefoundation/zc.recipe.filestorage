@@ -1,1 +1,1 @@
-zc/recipe/filestorage/README.rst
+src/zc/recipe/filestorage/README.rst

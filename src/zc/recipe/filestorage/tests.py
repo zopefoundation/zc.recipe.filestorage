@@ -12,10 +12,11 @@
 #
 ##############################################################################
 
-import os, re, unittest
-import pkg_resources
+import os
+import re
 import doctest
 from zope.testing import renormalizing
+
 
 def test_suite():
     return doctest.DocFileSuite(
@@ -25,5 +26,5 @@ def test_suite():
                         % dict(sep=re.escape(os.path.sep))),
              r'/tmp/data/Data.fs'),
             (re.compile(r'\S+sample-(\w+)'), r'/sample-\1'),
-            ]),
-        )
+        ]),
+    )
