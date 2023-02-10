@@ -30,8 +30,7 @@ object:
     >>> print(buildout['db']['path'])
     /buildout/foo/Main.fs
 
-    >>> from six import print_
-    >>> print_(buildout['db']['zconfig'], end='')
+    >>> print(buildout['db']['zconfig'], end='')
     <zodb>
       <filestorage>
         path /buildout/foo/Main.fs
@@ -56,7 +55,7 @@ object:
     >>> print(buildout['db']['path'])
     /tmp/tmpQo0DTB/db/Data.fs
 
-    >>> print_(buildout['db']['zconfig'], end='')
+    >>> print(buildout['db']['zconfig'], end='')
     <zodb>
       <filestorage>
         path /tmp/tmpQo0DTB/db/Data.fs
