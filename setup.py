@@ -7,7 +7,7 @@ from setuptools import setup
 name = "zc.recipe.filestorage"
 setup(
     name=name,
-    version='2.0',
+    version='2.1.dev0',
     author="Jim Fulton",
     author_email="zope-dev@zope.dev",
     description="ZC Buildout recipe for defining a file-storage",
