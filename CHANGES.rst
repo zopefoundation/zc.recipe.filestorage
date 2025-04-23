@@ -5,7 +5,9 @@ CHANGES
 2.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Add support for Python 3.12, 3.13.
+
+- Drop support for Python 3.7, 3.8.
 
 
 2.0 (2023-02-10)
